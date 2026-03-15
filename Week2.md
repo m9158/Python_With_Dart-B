@@ -55,7 +55,18 @@
 - *rest를 사용하여 함수의 시그니처에서 길이를 알 수 없는 긴 인수를 담기 위한 방법으로도 사용된다.
   - 필요없는 값을 나타내기 위해 사용되기도 하며, '_'를 사용하여 불필요함을 나타낼 수 있다.
 - 주어진 값과 같은 값의 개수를 반환하는 'count' 메서드를 사용한다.
+  
 
+<img width="1141" height="607" alt="Image" src="https://github.com/user-attachments/assets/77eee68c-d5fe-419c-aaaf-374a0b3a3319" />
+
+
+
+<img width="896" height="664" alt="Image" src="https://github.com/user-attachments/assets/8064f095-1d46-4c75-897e-57d699af6f7f" />
+
+
+
+
+<img width="1030" height="676" alt="Image" src="https://github.com/user-attachments/assets/6837d30c-11de-40b6-bb0f-32265334afba" />
 
 2. 리스트
    - 튜플과는 대조적으로 리스트는 크기나 내용을 변경할 수 있다.
