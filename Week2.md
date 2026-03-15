@@ -281,7 +281,7 @@ students = [
   - 생성된 우수 학생 명단 리스트를 print()를 이용해 화면에 출력하세요.
 ```
 
-<!-- 이 부분을 지우고 인증 사진을 제출해주세요.-->
+<img width="1235" height="528" alt="Image" src="https://github.com/user-attachments/assets/4953c6d1-e281-49ab-9514-9a722c5d945e" />
 
 
 ### 🎉 수고하셨습니다.
