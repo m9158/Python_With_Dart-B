@@ -68,6 +68,8 @@
 
 <img width="1030" height="676" alt="Image" src="https://github.com/user-attachments/assets/6837d30c-11de-40b6-bb0f-32265334afba" />
 
+
+
 2. 리스트
    - 튜플과는 대조적으로 리스트는 크기나 내용을 변경할 수 있다.
    - 대괄호([])나 list 함수를 이용하여 생성한다.
@@ -85,7 +87,17 @@
    - 리스트 같은 자료형은 색인 연산자 '[]'안에 start:stop을 지정해서 원하는 크기만큼 잘라낼 수 있다(슬라이싱 결과의 개수: stop - start)
    - 두번째 콜론 다음에 간격을 지정 가능하다. 값으로 -1을 사용하면 역순을 반환한다.
 
-test
+
+
+<img width="1066" height="681" alt="Image" src="https://github.com/user-attachments/assets/4451e81c-4990-4161-b7b6-5c3834dc9bd9" />
+
+
+<img width="1160" height="700" alt="Image" src="https://github.com/user-attachments/assets/f4f05225-3b67-4d37-b578-eabee89994f7" />
+
+
+
+<img width="1051" height="705" alt="Image" src="https://github.com/user-attachments/assets/d74bf991-aba6-43dc-b710-df54d2117aca" />
+
     
    
 
