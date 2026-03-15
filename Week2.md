@@ -99,33 +99,149 @@
 <img width="1051" height="705" alt="Image" src="https://github.com/user-attachments/assets/d74bf991-aba6-43dc-b710-df54d2117aca" />
 
     
-   
+3. 딕셔너리
+   - 키-값(Key-Value) 쌍을 저장하며 키와 값은 모두 파이썬 객체인 자료구조이다. 
+   - 키는 값과 연관되어 특정 키가 주어지면 값을 편리하게 검색, 삽입, 수정 또는 삭제가 가능하다.
 
-### 실습 인증
+3-1. 딕셔너리의 특징
+   - del 예약어나 pop 메서드를 통해 딕셔너리 값을 삭제할 수 있다.
+   - 키와 값의 메서드는 각각의 이터레이터를 반환한다.
+   - items 메서드를 사용하면 키와 값의 상을 갖는 튜플로 이를 사용할 수 있다.
+   - update 메서드를 사용하면 하나의 딕셔너리를 다른 딕셔너리와 합칠 수 있다. (이전 값은 사라짐).
+   - get 메서드는 기본키가 존재하지 않을 경우 None을 반환, pop은 예외를 발생시킴
+   - safefault 메서드는 여러 단어를 시작 글자에 따라 리스트로 저장
+   - defaultdict 메서드는 자료형 혹은 딕셔너리의 각 슬롯에 담길 기본값을 생성하는 함수를 넘겨서 딕셔너리를 생성한다.
+   - hash 함수를 사용하여 어떤 객체가 딕셔너리의 키로 사용할 수 있는지 (해시가 가능한지)를 검사할 수 있다.
 
-<!-- 예제 실습을 진행한 후, 실행 화면을 4-5장 캡쳐하여 제출해주세요. -->
+<img width="956" height="652" alt="Image" src="https://github.com/user-attachments/assets/4e29a3d3-15c6-4c13-a472-0976e235310a" />
+
+<img width="1059" height="723" alt="Image" src="https://github.com/user-attachments/assets/2d9db338-dbe6-46c7-b137-0dd687974578" />
 
 
+4. 집합
+   - 집합은 고유한 원소만 담는 정렬되지 않은 자료형이다.
+   - 집합은 두 가지 방법으로 생성할 수 있으며 set 함수를 이용하거나 중괄호({})를 이용해서 생성할 수 있다.
+
+4-1. 집합의 특징
+   - 합집합은 두 집합의 모든 원소를 모은 집합으로 union 메서드를 사용하거나 이항 영산자로 합집합을 구한다.
+   - 교집합은 두 집합에 공통으로 존재하는 원소만 모은 집합이다. intersection 메서드를 사용하거나 이항 연산자로 교집합을 구한다.
+   - 해시가 가능해야 한다어떤 집합이 다른 집합의 부분집합인지 상위집합인지 검사할 수 있다 (issubset)
+   - enumerate 함수: 순차 자료형에서 현재 아이템의 색인을 함께 추적할 때 흔히 사용된다.
+   - sorted 함수: 정렬된 새로운 순차 자료형을 반환한다.
+   - zip 함수: 여러 개의 리스트나 튜플 또는 다른 순차 자료형을 서로 짝지어서 튜플 리스트를 생성한다.
+   - reversed 함수: 순차 자료형을 역순으로 순회한다.
+   - map 함수: 중첩된 리스트나 리스트를 출력시 사용한다.
+
+
+<img width="859" height="456" alt="Image" src="https://github.com/user-attachments/assets/57fb8d8e-4d8c-413d-9e3e-f08803fa67a6" />
+
+
+<img width="964" height="475" alt="Image" src="https://github.com/user-attachments/assets/153210fb-482a-4080-bb5f-d6f19b97887f" />
 
 
 ## 2. 함수
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 함수
+   - 코드를 재사용하고 조직화하기 위한 가장 중요한 수단.
+   - def 예약어로 정의, 선택적으로 return 예약어를 사용하는 코드 블록 포함한다.
+   - return 문이없다면 자동으로 None 반환.
 
-### 실습 인증
+1-1. 함수의 특징
+   - 각 함수는 여러 개의 위치 인수와 키워드 인수를 받을 수 있다.
 
-<!-- 예제 실습을 진행한 후, 실행 화면을 4-5장 캡쳐하여 제출해주세요. -->
+<img width="961" height="452" alt="Image" src="https://github.com/user-attachments/assets/86f441e0-af03-4839-87a8-cb41485e8367" />
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+2. 네임스페이스, 스코프, 지역 함수
+   - 함수는 전역, 지역, 두 가지 스코프에서 변수를 참조한다.
+   - 함수 내에서 선언된 변수는 기본적으로 모두 지역 네임스페이스에 속한다.
+
+
+2-1. 특징
+   - func()함수를 호출하면 비어 있는 리스트 a가 생성되고 다섯 개의 원소가 리스트에 추가된다.
+
+
+<img width="887" height="397" alt="Image" src="https://github.com/user-attachments/assets/f79baedc-28ff-4762-8f65-ab9643a482cf" />
+
+
+
+
+3. 여러 값 반환하기
+   - 하나의 함수에서 여러 개의 값을 반환하는 기능
+   - return_value를 통해 반환된 새 개의 값을 갖는 튜플이 된다.
+
+
+<img width="909" height="461" alt="Image" src="https://github.com/user-attachments/assets/bceb80d0-0397-477c-b220-b984cc2855e2" />
+
+
+
+4. 익명(람다) 함수
+   - 익명 함수 혹은 람다 함수라고 부르는 값을 반환하는 단순한 한 문장으로 이루어진 함수를 지원한다.
+   - lamda 예약어로 익명 함수를 정의하며, 이는 '익명 함수를 선언한다'라는 의미이다.
+  
+<img width="932" height="429" alt="Image" src="https://github.com/user-attachments/assets/7797f819-da1d-446b-bf22-bffb41753125" />
+
+
+5. 제너레이터
+   - 많은 파이썬 객체는 리스트 내의 객체나 파일의 각 행 같은 순차적인 자료를 순회하는 방법을 제공한다.
+   - 이터레이터 프로토콜을 이용해 순회 가능한 객체를 만들 수 있다.
+   - 일반 함수는 실행 시 단일 값을 반환하는 반면 제너레이터는 제너레이터를 사용할 때마다 실행을 중지했다가 다시 시작하며 순차적인 값을 반환한다.
+   - 제너레이터를 생성하려면 함수에서 return을 사용하는 대신 yield 예약어를 사용한다.
+
+
+<img width="958" height="321" alt="Image" src="https://github.com/user-attachments/assets/4e193e19-8cf1-4e0e-9b1b-c2dc0e06297a" />
+
+
+5-1. 제너레이터 표현식
+   - 리스트 표현식에서 대괄호를 사용하듯이 괄호를 사용해서 제너레이터를 생성한다.
+   - 함수의 인수로 리스트 표현식을 사용하는 대신 제너레이터 표현식을 사용할 수 있다.
+
+<img width="863" height="357" alt="Image" src="https://github.com/user-attachments/assets/a1a3cf27-bbe1-4076-9ddb-fe267344917e" />
+
+
+6. itertools 모듈
+   - 일반적인 데이터 알고리즘을 위해 여러 제너레이터를 제공한다.
+   - groupby 함수는 예를 들어 순차 자료구조와 함수를 받아 인수로 받은 함수에서 반환하는 값에 따라 그룹을 지어준다.
+  
+<img width="883" height="255" alt="Image" src="https://github.com/user-attachments/assets/6f7e4bb6-3dac-455d-818f-90b27c2b5bb9" />
+  
+7. 오류와 예외 처리
+   - 데이터 분석 애플리케이션에서는 많은 함수가 특정한 종류의 입력만 처리하도록 되어 있다.
+   - 예를 들어 float 함수는 문자열을 부동소수점수로 변환할 수 있지만, 적절하지 않은 입력에 대해서는 valueError와 함께 실패하게 된다.
+
+
+  
+<img width="921" height="177" alt="Image" src="https://github.com/user-attachments/assets/3171b1db-c7b4-4b6c-9b8a-458388882ed5" />
+
+
+
+7-1. IPython에서 예외 처리
+   - %run을 이용해서 코드를 실행하던 중에 예외가 발생하면 IPython은 기본적으로 전체 스택트레이스를 출력하고 해당 위치 주변의 코드를 함께 보여준다.
+
+
 
 
 ## 3. 파일과 운영체제
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 파일과 운영체제
+   - 내장 함수 open을 이용하여 파일의 상대 경로나 절대 경로를 넘겨주어야 한다.
+   - 기본적으로 파일은 읽기 전용 모드인 r로 열린다. 파일 핸들 f는 리스트로 생각할 수 있으며 파일의 매 줄을 순회한다.
+   - open을 사용했다면 작업이 끝났을 때 명시적으로 닫아야 한다. 파일을 닫으면 해당 자원을 운영체제로 돌려준다.
+   - with 문을 사용하면 파일 작업이 끝났을 때 필요한 작업을 쉽게 처리할 수 있다.
+   - w를 사용하면 파일이 새롭게 생성되고 파일의 내용을 새로운 내용으로 덮어 쓴다.
+
+1-1. read, seek, tell 메서드
+   - raed 메서드는 해당 파일에서 특정 개수 만큼의 문자를 반환한다. read 메서드는 읽은 바이트만큼 파일 핸들의 위치를 옮긴다.
+   - tell 메서드는 현재 위치를 알려준다.
+   - seek 메서드는 파일 핸들의 위치를 해당 파일에서 지정한 바이트 위치로 옮긴다.
+
+<img width="958" height="259" alt="Image" src="https://github.com/user-attachments/assets/4c50b554-a5e0-44dc-bcd4-9a4aee3b0523" />
+
+
+<img width="927" height="405" alt="Image" src="https://github.com/user-attachments/assets/3d678f63-ac39-454b-a6f8-fb61cbac6fab" />
 
 ### 실습 인증
 
