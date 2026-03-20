@@ -103,78 +103,159 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 난수 생성
+   - numpy.random 모듈은 파이썬 내장 random 모듈을 보강해 다양한 종류의 확률분포로부터 효과적으로 표본값을 생성하는데 주로 사용한다.
+   - numpy.random.standard_normal을 사용해 표준정규분포로부터 4*4 크기의 표본을 생성할 수 있다.
+   - seed 인수는 난수 생성기의 초기 상태를 결정하며 rng 객체가 데이터를 생성할 때마다 상태가 변경된다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="955" height="370" alt="image" src="https://github.com/user-attachments/assets/fbb34349-fc02-4d92-b8b8-87dcf465dedb" />
+
 
 
 ## 3. 유니버설 함수: 배열의 각 원소를 빠르게 처리하는 함수
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 유니버설 함수
+   - ufunc라고도 부르는 유니버설 함수는 ndarray 안의 데이터 원소별로 연산을 수행하는 함수다.
+   - 유니버설 함수는 하나 이상의 스칼라 값을 받아서 하나 이상의 스칼라 결괏값을 반환하는 간단한 함수를 빠르게 수행하는 벡터화된 래퍼 함수라고 생각하면 된다.
+   - 많은 ufunc는 numpy.sqrt나 uumpy.exp 같은 간단한 변형을 전체 원소에 적용할 수 있다. (단항 유니버설 함수)
+   - uumpy.add나 numpy.maximum처럼 2개의 매개변수를 취해서 단일 배열을 반환하는 함수는 이항 유니버설 함수다.
+   - numpy.modf는 파이썬 내장 함수인 math.modf의 벡터화 버전이며 분수를 받아서 몫과 나머지를 함께 반환한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="958" height="479" alt="image" src="https://github.com/user-attachments/assets/b8c54482-3528-476c-b60d-a90d934fd813" />
+
+<img width="959" height="480" alt="image" src="https://github.com/user-attachments/assets/4b733cb1-7513-4b56-8057-94b88ec2dcbd" />
 
 
 ## 4. 배열을 이용한 배열 기반 프로그래밍
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+4. 배열을 이용한 배열 기반 프로그래밍
+   - 넘파이 배열을 사용하면 반복문을 작성하지 않고 간결한 배열 연산을 통해 많은 종류의 데이터처리 작업을 할 수 있다.
+   - numpy.meshgrid 함수는 두 개의 1차원 배열을 받아서 모든 (x, y) 짝을 만들 수 있는 2차원 배열 두 개를 반환한다.
+   - 맷플롯립을 이용해서 2차원 배열을 시각화 할 수 있다.
+
+4-1. 배열 연산으로 조건부 표현하기
+   - numpy.where 함수는 x if 조건 else y 같은 삼항식의 벡터화된 버전이다.
+   - cond의 값이 True일 때는 xarr값을 취하고, 반대로 yarr의 값을 추티하고 싶다면 리스트 표기법을 이용한다.
+   - 다만 순수 파이썬으로 수행되어 빠르게 처리 못함. 그래서 numpy.where 함수를 사용하는 것이다. 스칼라 값의 배열을 조합할 수도 있다.
+
+4-2. 수학 메서드와 통계 메서드
+   - 배열 전체 혹은 배열의 한 축에 속하는 자료에서 통계를 계산하는 수학 함수는 배열 클래스의 메서드로 사용할 수 있다.
+   - 전체의 합, 평균, 표준편차는 넘파이의 최상위 함수를 이용하거나 배열의 인스턴스 메서들르 사용해서 구한다.
+   - numpy.sum 같은 넘파이 함수를 사용할 때는 첫번째 인수로 계산하려는 배열을 넘겨주어야한다.
+   - mean이나 sum 같은 함수는 선택적으로 axis 인수를 받아서 해당 axis에 대한 통계를 계산하고 한 차수 낮은 배열을 반환한다.
+   - comsum, cumprod 메서드는 중간 계산값을 담고 있는 배열을 반환한다.
+
+4-3. 불리언 배열을 위한 메서드
+   - 불리언 배열에서 sum 메서드를 실행하면 True인 원소의 개수가 반환된다.
+
+4-4. 정렬
+   - 넘파이 역시 sort를 사용하여 정렬이 가능하다.
+
+4-5. 집합 관련 함수
+   - 배열 내에서 중복된 원소를 제거하고 남은 원소를 정렬된 형태로 반환하는 numpy.unique 함수다.
+   - numpy.in1d는 인수로 받은 배열의 원소가 기존 배열에 포함되는지 검사한 후 불리언 배열로 반환한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="955" height="248" alt="image" src="https://github.com/user-attachments/assets/642fa600-257a-4a87-ab7f-4a1dba1c9141" />
+
+
+
+<img width="961" height="479" alt="image" src="https://github.com/user-attachments/assets/04aa69c3-e16c-475a-955d-096dd28a700e" />
+
+
+<img width="962" height="480" alt="image" src="https://github.com/user-attachments/assets/a2f1b1ca-0fa8-4ff3-89ad-df67fb107f77" />
+
+
+<img width="963" height="480" alt="image" src="https://github.com/user-attachments/assets/e57c9136-9eb4-4699-b013-7da27123a20a" />
+
+
+<img width="962" height="368" alt="image" src="https://github.com/user-attachments/assets/f89f1ce2-36a7-404b-ac67-55182ba1219a" />
+
+
+
+<img width="965" height="483" alt="image" src="https://github.com/user-attachments/assets/9defc9d8-d3ca-406b-ad81-6b6a1d73d8c1" />
 
 
 ## 5. 배열 데이터의 파일 입출력
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+5. 배열 데이터의 파일 입출력
+   - 넘파이는 디스크에서 텍스트나 바이너리 형식의 데이터를 불러오거나 저장할 수 있다.
+   - numpy.save와 numpy.load는 배열 데이터를 효과적으로 디스크에 저장하고 불러오는 함수다.
+   - 배열은 기본적으로 압축되지 않은 원시 바이너리 형식의 .npy 파일로 저장된다.
+   - np.savez함수를 이용하면 여러 개의 배열을 압축된 형식으로 저장할 수 있다.
+   - .npy 파일을 불러올 때는 각 배열을 필요할 때 불러올 수 있도록 딕셔너리 형식의 객체에 저장한다.
+   - 압축이 잘되는 형식의 데이터라면 numpy.savez_compressed를 사용한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="966" height="371" alt="image" src="https://github.com/user-attachments/assets/c80a2875-5d4c-4c88-a8c3-4dee44ea30af" />
+
 
 
 ## 6. 선형대수
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 선형대수
+   - 행렬의 곱셈, 분할, 행렬식, 정사각행렬 계산 같은 선형대수는 배열을 다루는 라이브러리에서 중요하다.
+   - 두 개의 2차원 배열을 * 연산자로 곱하면 행렬 곱셈이 아니라 대응하는 각각의 원소의 곱을 계산한다.
+   - dot 함수를 이용하여 행렬 곱셈을 한다.
+   - numpy.linalg는 행렬의 분할과 역행렬, 행렬식과 같은 것을 포함한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+
+<img width="962" height="425" alt="image" src="https://github.com/user-attachments/assets/dd40b363-7c24-4237-b6c8-48ac266f638a" />
+
+
+<img width="961" height="481" alt="image" src="https://github.com/user-attachments/assets/b04f8728-5c16-4735-95a2-b7a63ee7b2ae" />
+
+
 
 
 ## 7. 계단 오르내리기 예제
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+7. 개단 오르내리기 예제
+   - 배열 연산의 활용법을 보여주는 간단한 애플리케이션.
+   - np.abs(walk) >= 10 을 통해 처음 위치에서 10칸 이상 떨어진 시점을 알려주는 불리언 배열을 얻을 수 있다.
+
+7-1. 한번에 많이 시뮬레이션하기
+   - 대략 5,000회 정도 상당히 많은 횟수를 시뮬해야한다면, numpy.random 함수에 크기가 2인 튜플을 넘기면 2차열 배열이 생성되고 각 열에서 누적 합을 구하면 된다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="961" height="455" alt="image" src="https://github.com/user-attachments/assets/16c21c3d-45b8-4fa5-9ccf-07d0dd194efb" />
+
+
+<img width="957" height="348" alt="image" src="https://github.com/user-attachments/assets/461887c2-8a6b-451d-966c-63a6749314c1" />
+
+
+<img width="959" height="256" alt="image" src="https://github.com/user-attachments/assets/18ee561b-633c-47e3-81b9-8d319f082d6f" />
 
 
 
