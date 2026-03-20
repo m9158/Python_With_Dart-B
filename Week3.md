@@ -285,10 +285,12 @@ sales = np.array([
   - sum() 메서드의 axis 옵션을 활용하여 품목별 합계를 구하세요.
   - print()를 이용해 품목별 총 판매량 리스트를 출력하세요.
 
+
 2. 특정 기간 및 품목 추출
   - 문제 설명: 수요일부터 금요일까지(3~5행), 첫 번째와 두 번째 품목(사과, 배)의 판매량만 따로 보기 
   - 배열 슬라이싱을 사용하여 해당 데이터를 추출하세요.
   - print()를 이용해 추출된 3x2 배열을 출력하세요.
+
 
 3. 목표 미달 판매량 조정
   - 문제 설명: 하루 판매량이 40개 미만인 경우, 값을 0으로 표시하고, 40개 이상인 경우는 기존 값을 유지
@@ -296,8 +298,11 @@ sales = np.array([
   - print()를 이용해 수정된 배열을 출력하세요.
 ```
 
-<!-- 이 부분을 지우고 인증 사진을 제출해주세요.-->
+<img width="431" height="112" alt="image" src="https://github.com/user-attachments/assets/f066dba9-84a1-4646-b2a2-75657776fb92" />
 
+<img width="664" height="277" alt="image" src="https://github.com/user-attachments/assets/9042fc11-347a-48c9-9aef-809b5f805c7e" />
+
+<img width="647" height="170" alt="image" src="https://github.com/user-attachments/assets/8de6a9c4-4585-49c6-b0e6-8e6a5a984427" />
 
 
 ### 🎉 수고하셨습니다.
