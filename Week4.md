@@ -42,15 +42,45 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. Series
+   - 일련의 객체를 담을 수 있는 1차원 배열 같은 자료구조다.
+   - 그리고 index라는 배열의 데이터와 연관된 이름을 갖는다.
+   - Series의 배열과 색인 객체는 각각 array와 index 속성을 통해 얻을 수 있다.
+   - 고정 길이의 정렬된 딕셔너리라고 생각하면 좋다.
+
+2. DataFrame
+   - 표 같은 스프레드시트 형식의 자료구조다.
+   - 여러 개의 열이 있고 서로 다른 종류의 값을 담을 수 있다.
+   - 행과 열에 대한 색인을 가지며, 색인의 모양이 같은 Series 객체를 담고 있는 파이썬 딕셔너리로 생각하면 좋다.
+   - DataFrame의 색인은 Series와 동일한 방식으로 자동 할당되며 열은 data의 키 순서에 따라 정렬되어 저장된다.
+   - head()를 통해 처음 5개행만 출력 가능. tail은 그 반대
+   - 딕셔너리에 없는 값을 columns에 넘기면 결과에 결측치가 표시된다.
+   - 리스트나 배열을 열에 대입할 때는 대입하려는 값의 길이가 DataFrame의 길이와 동일해야 한다.
+   - del 예약어를 사용하여 열을 삭제할 수 있다.
+
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
 
+<img width="963" height="350" alt="image" src="https://github.com/user-attachments/assets/20bf3134-da95-4dfd-8151-e478681a1428" />
 
+<img width="962" height="175" alt="image" src="https://github.com/user-attachments/assets/41838529-36eb-4e98-967e-d84902b9061d" />
+
+~~~
+Series
+~~~
+
+<img width="961" height="396" alt="image" src="https://github.com/user-attachments/assets/e36ed291-56f0-40e2-8cbf-664caccade27" />
+
+<img width="960" height="426" alt="image" src="https://github.com/user-attachments/assets/786c9c29-17bc-4e1a-86f3-bee418b39f9f" />
+
+<img width="958" height="446" alt="image" src="https://github.com/user-attachments/assets/358ee5e1-089b-4235-86cf-a3c154c09830" />
+
+~~~
+DataFrame
+~~~
 ## 2. 핵심 기능
 
 ### 개념정리
