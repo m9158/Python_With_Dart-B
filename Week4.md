@@ -186,16 +186,52 @@ DataFrame
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 기술 통계 계산과 요약
+   - 판다스 객체는 일반적인 수학 메서드와 통계 메서드를 갖고 있다.
+   - sum 메서드를 호출하면 각 열의 합을 담은 Series를 반환한다.
+   - axis='columns' 또는 axis=1 옵션을 넘기면 각 열의 합을 반환한다.
+   - 모든 값이 NA 값이라면 그 합은 0이 되고 값이 하나라도 NA라면 결과 값은 NA 다. 이는 skipna 옵션으로 비활성화 할 수 있다.
+   - idxmin이나 idxmax 같은 메서드는 최소 혹은 최댓값을 가진 색인값 같은 간접 통계를 반환한다.
+   - cumsum()으로 누산이 가능하다.
+
+1-1. 상관관계와 공분산
+   - corr 메서드는 NA가 아니며 정렬된 색인에서 연속하는 두 Series의 상관관계를 계산하고 cov 메서드는 공분산을 계산한다.
+   - 반면 DataFrame에서 corr과 cov 메서드는 각 DataFrame 행렬상의 상관관계와 공분산을 계산한다.
+   - corwith 메서드를 사용하면 다른 Series나 DataFrame과의 상관관계를 계산한다.
+
+1-2. 유일값, 값 세기, 멤버십
+   - unique 함수는 Series에서 중복되는 값을 제거하고 유일한 값만 담음 Series를 반환한다.
+   - unique.sort()를 이용해서 유일값은 정렬된 순서로 반환한다.\
+   - value.counts에서 반환하는 Series는 담고 있는 값을 내림차순 정렬한다.
+   - isin 메서드는 어떤 값이 Series에 존재하는지 나타내는 불리언 벡터를 반환한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="962" height="331" alt="image" src="https://github.com/user-attachments/assets/6d314a47-c976-4e58-9518-2a28af3923a1" />
 
+<img width="962" height="450" alt="image" src="https://github.com/user-attachments/assets/20515df1-4ca4-458e-b51d-966165e1a60d" />
 
+~~~
+기술 통계 계산과 요약
+~~~
 
+<img width="958" height="417" alt="image" src="https://github.com/user-attachments/assets/909252a5-83f5-4933-a277-6d8cb6bca13b" />
+
+<img width="961" height="262" alt="image" src="https://github.com/user-attachments/assets/d6e8a98f-11ff-46fc-b30d-cbdd2d117727" />
+
+~~~
+상관관계와 공분산
+~~~
+
+<img width="959" height="456" alt="image" src="https://github.com/user-attachments/assets/bfa83c67-5df0-48bb-a69b-2e6e575e2aa7" />
+
+<img width="960" height="392" alt="image" src="https://github.com/user-attachments/assets/515d54df-f2d6-4253-9a84-1d9c15ff3ff6" />
+
+~~~
+유일값, 값 세기, 멤버십
+~~~
 
 # 2️⃣ 실습 과제
 
