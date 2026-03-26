@@ -270,8 +270,10 @@ df = pd.DataFrame(data)
   - print()를 이용해 새로운 열이 추가된 DataFrame의 상단 5행(head)을 출력하세요.
 ```
 
-<!-- 이 부분을 지우고 인증 사진을 제출해주세요.-->
+<img width="954" height="400" alt="image" src="https://github.com/user-attachments/assets/c321220b-2939-4dea-8a6f-ecb1bd89cd64" />
 
+
+<img width="960" height="327" alt="image" src="https://github.com/user-attachments/assets/4dc9fcc4-11b3-4308-b228-3e029ee04b0c" />
 
 
 ### 🎉 수고하셨습니다.
