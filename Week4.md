@@ -108,7 +108,29 @@ DataFrame
 3. 색인하기, 선택하기, 거르기
    - Series의 색인은 넘파이 배열의 색인과 유사하게 작동하지만 정수가 아니어도 된다는 점이 다르다.
    - Series와 마찬가지로 DataFrame에는 레이블과 정수 기반 색인을 위한 loc, iloc 속성이 존재한다.
-   - DataFrame은 2차원이므로 축 레이블(loc) 또는 정수 색인(iloc)을 이용해 행렬의 부분집합을 선택할 수 있다. 
+   - DataFrame은 2차원이므로 축 레이블(loc) 또는 정수 색인(iloc)을 이용해 행렬의 부분집합을 선택할 수 있다.
+
+4. 산술 연산과 데이터 정렬
+   - 판다스는 서로 다른 색인을 가지고 있는 객체 간의 산술 연산을 간단하게 처리할 수 있다.
+   - 서로 겹치는 색인이 없는 경우 데이터는 결측치가 된다.
+   - 공통 열이나 행 레이블이 없는 DataFrame을 더하면 결과는 아무것도 나타나지 않는다.
+   - fill_value 값을 통해 누락된 값을 대체가 가능하다.
+  
+5. 함수 적용과 매핑
+   - 판다스 객체에도 넘파이의 유니버설 함수를 적용할 수 있다.
+
+6. 정렬과 순위
+   - 정렬된 새로운 객체를 반환하는 sort_index 메서드를 사용해 행과 열의 색인을 알파벳순으로 정렬할 수 있다.
+   - DataFrame은 행과 열 중 하나의 인덱스를 기준으로 정렬할 수 있다.
+   - Series 객체를 값에 따라 정렬하고 싶다면 sort_values 메서드를 사용하면 된다.
+   - 결측치는 맨 마지막에 위치한다.
+   - rank 메서드는 동점인 항목에 대해서는 평균 순위를 매겨 책정한다.
+
+7. 중복 색인
+   - 색인은 유일해야 하지만 의무는 아니기에 중복된 색인을 가질 수 있다.
+   - is_unique 속성은 해당 값이 유일한지 아닌지 알려준다.
+   - 유일한 색인만 있다면 스칼라 값을 반환하고, 중복되는 색인값이 있을 때는 하나의 Seires 객체를 반환한다.
+
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
@@ -126,6 +148,39 @@ DataFrame
 하나의 행이나 열 삭제하기
 ~~~
 
+<img width="961" height="407" alt="image" src="https://github.com/user-attachments/assets/fba89479-1a1f-4987-a8e9-742291081f71" />
+
+<img width="964" height="457" alt="image" src="https://github.com/user-attachments/assets/ee1693bc-388e-4fea-8d95-0e2379285806" />
+
+~~~
+산술 연산과 데이터 정렬
+~~~
+
+<img width="961" height="252" alt="image" src="https://github.com/user-attachments/assets/1b83603d-f571-4cac-8099-c416391c4ebb" />
+
+~~~
+함수 적용과 매핑
+~~~
+
+
+<img width="958" height="280" alt="image" src="https://github.com/user-attachments/assets/19f156b3-c0f6-4cac-a7aa-ae0a6ea402c5" />
+
+<img width="963" height="344" alt="image" src="https://github.com/user-attachments/assets/0acbcdf3-7c1b-4bd7-9439-c232477a1589" />
+
+<img width="958" height="182" alt="image" src="https://github.com/user-attachments/assets/f8622b8c-eaf8-4c72-99b8-22f205219c8b" />
+
+
+~~~
+정렬과 순위
+~~~
+
+
+<img width="966" height="370" alt="image" src="https://github.com/user-attachments/assets/10cca307-9cd8-4b39-8d7a-c71a38de181f" />
+
+
+~~~
+중복 색인
+~~~
 
 ## 3. 기술 통계 계산과 요약
 
