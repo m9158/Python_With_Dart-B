@@ -61,6 +61,23 @@
 2. 데이터를 텍스트 형식으로 기록하기
    - 읽어오기와 마찬가지로 데이터를 구분자로 구분한 형식으로 내보내는 것도 가능하다.
    - to_csv 메서드를 이요하면 데이터를 쉼표로 구분된 형식으로 파일에 쓸 수 있다.
+   - 누락된 값은 비어 있는 문자열로 나타나는데, 이것 역시 원하는 값으로 지정 가능하다.
+
+3. 다른 구분자 형식 다루기
+   - pandas.read_csv 같은 형식 말고 수동으로 처리해야 하는 경우도 있다.
+   - 파일을 읽듯 reader를 순회하면 둘러싸고 있던 큰 따옴표가 제거된 리스트를 얻을 수 있다.
+   - 딕셔너리 표기법과 행을 열로 전치해주는 zip(*values)를 이용해서 데이터 열 딕셔너리를 만들었다.
+
+4. JSON 데이터
+   - JSON은 웹 브라우저와 다른 애플리케이션이 HTTP 요청으로 데이터를 보낼 때 널리 사용하는 표준 파일 형식 중 하나다.
+   - JSON은 CSV 같은 표 형식의 텍스트보다 좀 더 유연한 데이터 형식이다.
+   - 객체의 키는 반드시 문자열 이어야 한다.
+   - JSON 문자열을 파이썬 형태로 변환하기 위해서는 json.loads를 사용한다.
+   - json.dumps는 파이썬 객체를 JSON 형태로 반환한다.
+
+5. XML과 HTML: 웹 스크래핑
+   - lxml은 가장 빠르게 작동하고 깨진 HTML과 XML파일도 잘 처리한다.
+   - pandas.read_html 함수에는 다양한 옵션이 있는데 기본적으로<table> 태그 안에 모든 형식의 데이터 파싱을 시도한다 -> DataFrame 객체의 리스트에 저장됨.
 
 ### 실습 인증
 
@@ -69,6 +86,11 @@
 
 <img width="957" height="361" alt="image" src="https://github.com/user-attachments/assets/a82c9010-a3fe-41e6-9f78-5c6e87419e25" />
 
+<img width="967" height="394" alt="image" src="https://github.com/user-attachments/assets/99b17216-b6d0-4714-9dab-daf3af7e6b71" />
+
+<img width="956" height="469" alt="image" src="https://github.com/user-attachments/assets/b7e30227-21e8-4192-97b5-609efcc35d19" />
+
+<img width="961" height="444" alt="image" src="https://github.com/user-attachments/assets/42d1a959-7881-4748-b6db-e27409c15bbe" />
 
 
 ## 2. 이진 데이터 형식
