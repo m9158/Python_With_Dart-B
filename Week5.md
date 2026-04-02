@@ -158,27 +158,74 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- isna 메서드는 값이 Null인 경우 True를 가지는 불리언 Series를 반환한다.
+- 파이썬 내장 Nine 값 또한 NA 값으로 취급한다.
+
+1. 누락된 데이터 골라내기
+   - dropna를 사용하면 매우 쉽게 작업할 수 있다. 기본적으로 NA 값이 하나라도 있는 행을 제외한다.
+   - how = 'all' 옵션을 넘기면 모든 값이 NA인 행만 제외된다.
+   - 열을 제외하는 방법도 axis='columns'를 넘겨주면 된다.
+
+2. 결측치 채우기
+   - fillna를 사용해 누락된 값을 채워준다.
+   - 딕셔너리 값을 넘기면 각 열마다 다른 값이 채워진다.
+   - 평균값이나 중간값을 넘겨서 데이터를 채울 수 있다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="961" height="482" alt="image" src="https://github.com/user-attachments/assets/8974ea35-c2f6-439a-adeb-85f48846cf3b" />
 
+<img width="957" height="315" alt="image" src="https://github.com/user-attachments/assets/25b4bdeb-e3b5-48c1-b550-ff6ff7d465c8" />
+
+<img width="960" height="324" alt="image" src="https://github.com/user-attachments/assets/fc3e1026-1180-413b-a82f-2a7beff470f3" />
 
 ## 6. 데이터 변형 
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+1. 중복 제거하기
+   - drop_duplicates는 duplicated 배열이 False인 DataFrame을 필터링해 반환한다.
+   - keep = 'last' 옵션을 넘기면 마지막으로 발견된 값을 반환한다.
+
+2. 함수나 매핑을 이용해서 데이터 변형하기
+   - map 메서드는 변형을 위한 매핑 정보가 담긴 딕셔너리 같은 객체나 함수를 인수로 받는다.
+
+3. 값 치환하기
+   - replace 메서드는 치환작업을 더 간단하고 유연한 방식으로 제공한다.
+   - 여러 개의 값을 한 번에 치환하려면 하나의 값 대신 치환하려는 값의 리스트를 넘기면 된다.
+
+4. 축 색인 이름 바꾸기
+   - 축 이름도 함수나 새롭게 바꿀 값을 이용해서 변형 할 수 있다.
+   - map 메서드와 index에 바로 대입은 동일하다.
+
+5. 이산화
+   - pandas.cut 함수를 이용해서 나이에 대한 그룹을 나누어볼 수 있다.
+
+6. 이상치를 찾고 제외하기
+   - any메서드를 사용해 특정 조건을 만족하지 못하는 행들을 선택할 수 있다.
+
+7. 뒤섞기와 임의 샘플링
+   - numpy.random.permutation 함수를 이용하면 시리즈나 데이터프레임의 행을 임의의 순서대로 재배치 할 수 있다.
+
+8. 표시자, 더미 변수 계산하기
+   - 
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
 
+<img width="961" height="367" alt="image" src="https://github.com/user-attachments/assets/0d72f789-11c3-400e-ab0c-aa250ea5d5d9" />
+
+<img width="962" height="158" alt="image" src="https://github.com/user-attachments/assets/d6a3d1aa-3167-4823-9ed1-34f23e9a9175" />
+
+<img width="958" height="380" alt="image" src="https://github.com/user-attachments/assets/16cee2ca-ce08-4fb4-98ce-3f51f894e138" />
+
+<img width="959" height="479" alt="image" src="https://github.com/user-attachments/assets/6a0171ee-72a9-4a13-a72f-a81dce760c61" />
+
+<img width="964" height="479" alt="image" src="https://github.com/user-attachments/assets/1eab6693-59d6-4c82-8324-6a08c845773e" />
 
 
 # 2️⃣ 실습 과제
