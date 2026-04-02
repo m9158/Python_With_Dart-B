@@ -276,7 +276,13 @@ json_obj = """
   - print()를 이용해 데이터의 상단 5행(head)을 출력하세요.
 ```
 
-<!-- 이 부분을 지우고 인증 사진을 제출해주세요.-->
+
+
+<img width="1108" height="555" alt="image" src="https://github.com/user-attachments/assets/fc79b2da-2174-475a-afbb-8b01900e2d13" />
+
+<img width="958" height="314" alt="image" src="https://github.com/user-attachments/assets/44aa0b69-4c03-4a6b-a8a2-8d333ab8b94d" />
+
+<img width="957" height="291" alt="image" src="https://github.com/user-attachments/assets/c3fc36c9-8ed1-4031-84c7-43fbd506875d" />
 
 
 
