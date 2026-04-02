@@ -97,39 +97,61 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 데이터를 이진 형식으로 저장하는 가장 간단한 방법은 파이썬 내장 pickle 모듈을 이용하는 것이다.
+- 판다스 객체는 pickle 형식으로 데이터를 디스크에 저장할 수 있는 to_pickle 메서드를 제공한다.
+
+1. 마이크로소프트 엑셀 파일 읽기
+   - pandas.ExcelFile 클래스나 pandas.read_excel 함수를 통해 표 형식의 엑셀 파일을 읽을 수 있다.
+   - parse 함수를 통해 DataFrame으로 읽어올 수 있다.
+   - index_col을 사용해 색인 열을 인수로 지정할 수 있다.
+   - 간단하게 파일 이름을 pandas.read_excel에 넘겨줄 수 있다.
+   - 판다스 데이터를 엑셀 형식으로 저장하려면 ExcelWriter 객체를 생성한 다음 판다스 객체의 to_excel 메서드를 이용해 데이터를 저장한다.
+
+2. HDF5 형식 사용하기
+   - 대량의 과학 계산용 배열 데이터를 저장하기 위해 고안된 훌륭한 파일 포맷이다.
+   - 여러개의 데이터셋을 저장하고 부가 정보를 기록할 수 있다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="963" height="478" alt="image" src="https://github.com/user-attachments/assets/f421ce6d-0dea-489f-bc19-9297f2f9bb42" />
+
+<img width="959" height="235" alt="image" src="https://github.com/user-attachments/assets/e93b19d6-d8be-427d-baab-1bbb8dc67c59" />
 
 
 ## 3. 웹 API와 함께 사용하기
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 데이터 피드를 json이나 여타 다른 형식으로 얻을 수 있는 공개 API를 제공하는 웹사이트가 많다
+- request 패키지다. 
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="966" height="395" alt="image" src="https://github.com/user-attachments/assets/8bd0e998-f490-46a0-a949-2afab0546f2e" />
+
+<img width="958" height="484" alt="image" src="https://github.com/user-attachments/assets/63c764d5-9836-467a-83f0-81249a7c007a" />
 
 
 ## 4. 데이터베이스와 함께 사용하기
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 판다스는 SQL 쿼리 결과를 간단하게 DataFrame으로 불러오는 함수를 몇 가지 제공한다.
+- 파이썬 내장 sqlite3 드라이버를 이용해서 SQLite3 데이터베으스를 만들어보자.
+- 대부분 파이썬 SQL 드라이버는 테이블에서 select 쿼리를 수행하면 튜플 리스트를 반환한다.
+- 변환된 튜플 리스트를 DataFrame 생성자에 바로 전달해도 되지만, cursor의 description 속성에 있는 열 이름을 지정해야 한다.
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="961" height="337" alt="image" src="https://github.com/user-attachments/assets/1965f92d-f632-4ddf-ac91-e1b714e47d3f" />
+
+<img width="961" height="478" alt="image" src="https://github.com/user-attachments/assets/efd127e0-d978-4f2f-8160-a3bc0742a183" />
 
 
 ## 5. 누락된 데이터 처리하기
