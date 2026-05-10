@@ -47,46 +47,102 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 넘파이 한계
+  - 정수/불리언 + 결측치 → 자동으로 float64 변환
+  - 대량 문자열 데이터 → 계산 비용↑, 메모리↑
+  - 일부 타입은 파이썬 객체 사용 → 속도 느림
+    
+- 해결: 판다스 확장 dtype
+  - 결측값은 np.nan 아닌 pd.NA 사용
+  - 핵심 타입: Int64, boolean, string, Float64, category
+  - astype()으로 변환 가능
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="963" height="442" alt="image" src="https://github.com/user-attachments/assets/60d78341-ddf3-4196-ab01-bb16ccf4a9ba" />
+
+
+<img width="960" height="177" alt="image" src="https://github.com/user-attachments/assets/8ddaaa82-936a-49fd-aa4c-c3baa688a6c1" />
 
 
 ## 2. 문자열 다루기 
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 파이썬 내장 문자열 메서드
+  - split : 구분자로 분리 / strip : 공백 제거 / join : 합치기
+  - find : 위치 반환(-1 if 없음) / index : 위치 반환(없으면 예외)
+  - count : 등장 횟수 / replace : 치환
+
+- 정규 표현식 (re 모듈)
+  - findall : 일치하는 모든 패턴 리스트 반환
+  - search : 첫 번째 매칭만 반환 (위치 포함)
+  - match : 문자열 시작부터만 검사
+  - sub : 패턴을 다른 문자열로 치환
+  - re.compile() : 정규식 객체로 만들어 재사용 → CPU 절약
+
+- 판다스 str 접근자
+  - NA 값 자동 처리 + 벡터화 연산
+  - str.contains, str.findall, str.extract, str.get, str[:]
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="963" height="484" alt="image" src="https://github.com/user-attachments/assets/b55d6ae1-e509-4f42-baec-f42c3cc62fc3" />
+<img width="959" height="399" alt="image" src="https://github.com/user-attachments/assets/653a207d-0921-4da2-ad3d-dab7443f593c" />
 
+<img width="953" height="427" alt="image" src="https://github.com/user-attachments/assets/24d830b5-0c3b-4773-ac1d-51c463bd3930" />
+<img width="967" height="384" alt="image" src="https://github.com/user-attachments/assets/2a770b99-d982-46f2-bacb-6a99ff6ebcc1" />
+<img width="962" height="243" alt="image" src="https://github.com/user-attachments/assets/693918df-59b8-4623-8ada-af0dc39f34fd" />
 
 ## 3. 범주형 데이터
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 개념
+  - 반복값을 정수 코드로 저장 → 메모리↓, 속도↑
+  - pd.unique() / pd.value_counts() 로 고유값/빈도 확인
+  - dim.take(values) : 정수 코드로 원래 문자열 복원
+
+- 핵심 속성/메서드
+  - .astype('category') : 범주형 변환
+  - .cat.codes : 정수 코드 / .cat.categories : 고유 범주 목록
+  - ordered=True : 순서 있는 범주형 (foo < bar < baz)
+  - .cat.set_categories() : 범주 추가
+  - .cat.remove_unused_categories() : 안 쓰는 범주 제거
+  - pd.get_dummies() : 원-핫 인코딩(더미 변수)
+
+- 성능: 문자열 배열 대비 value_counts() 약 30배 빠름, 메모리 약 60분의 1
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+
+<img width="957" height="455" alt="image" src="https://github.com/user-attachments/assets/6d8988eb-8309-4d82-97cd-ddc18528c4dd" />
+<img width="966" height="485" alt="image" src="https://github.com/user-attachments/assets/4269c030-3025-417b-8e0a-d570918614b6" />
+<img width="960" height="477" alt="image" src="https://github.com/user-attachments/assets/371d51e2-1786-4163-98d5-3792ab339852" />
+<img width="956" height="369" alt="image" src="https://github.com/user-attachments/assets/f76e1e09-49a5-4a7a-b799-0d533df8bf0e" />
 
 
 ## 4. 계층적 색인 
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- 개념
+  - 하나의 축에 2개 이상 색인 단계 → MultiIndex
+  - 고차원 데이터를 2D로 표현 가능
+  - 부분 색인(Partial indexing)으로 하위 그룹 선택 가능
+
+- 핵심 메서드
+  - unstack() : 내부 색인 → 열 / stack() : 열 → 내부 색인
+  - swaplevel() : 레벨 순서 교환 (데이터 변경 없음)
+  - sort_index(level=) : 레벨 기준 정렬
+  - set_index() / reset_index() : 열↔색인 전환
+  - groupby(level=) : 계층별 집계
 
 ### 실습 인증
 
@@ -99,20 +155,38 @@
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+- pd.merge(): 공통 키 기준 조인
+  - how: inner(기본, 교집합), left, right, outer(합집합)
+  - on : 공통 키 / left_on, right_on : 열 이름 다를 때
+  - left_index=True / right_index=True : 색인을 키로 사용
+  - suffixes : 겹치는 열 이름 처리
+
+- pd.concat(): 축 방향 이어 붙이기
+  - axis="columns" : 열 방향 / 기본은 행 방향
+  - keys : 계층적 색인 생성으로 출처 구분
+  - join="inner" : 교집합만 / 기본은 outer
+  - ignore_index=True : 색인 무시하고 새로 할당
+
+- combine_first(): a의 NaN을 b 값으로 채움
 
 ### 실습 인증
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="953" height="416" alt="image" src="https://github.com/user-attachments/assets/fba8f207-dd0d-4084-a203-f0fa0ff7f447" />
+<img width="957" height="455" alt="image" src="https://github.com/user-attachments/assets/66394955-fe3f-4169-a929-eac5946f0481" />
+<img width="961" height="362" alt="image" src="https://github.com/user-attachments/assets/9cf50852-3e32-478f-8992-e1a100f70bee" />
+<img width="958" height="305" alt="image" src="https://github.com/user-attachments/assets/d3b48e4e-797b-4ec4-a4c7-960597515f1c" />
+<img width="961" height="385" alt="image" src="https://github.com/user-attachments/assets/238a3770-ecaf-453a-8c8e-eef946a39be8" />
+<img width="957" height="184" alt="image" src="https://github.com/user-attachments/assets/ad1748f5-95bb-4041-b12f-e51cfb6142e6" />
+
 
 
 ## 6. 재구성과 피벗 
 
 ### 개념정리
 
-<!-- 이 부분을 지우고 새롭게 배우게 된 내용을 정리해주세요. -->
+
 
 ### 실습 인증
 
