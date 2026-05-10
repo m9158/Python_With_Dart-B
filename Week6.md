@@ -254,16 +254,19 @@ purchases = pd.DataFrame({
 
 
 <img width="959" height="320" alt="image" src="https://github.com/user-attachments/assets/b41975ad-8334-4564-8b55-f387168dcd02" />
+
 ~~~
 1번 문제
 ~~~
 
 <img width="958" height="198" alt="image" src="https://github.com/user-attachments/assets/1c363519-1431-476d-bac5-8a93d6de171b" />
+
 ~~~
 2번 문제
 ~~~
 
 <img width="960" height="295" alt="image" src="https://github.com/user-attachments/assets/e9bbc8ba-9417-49c5-b15d-fdfe8ad82416" />
+
 ~~~
 3번 문제
 ~~~
