@@ -148,7 +148,12 @@
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="953" height="416" alt="image" src="https://github.com/user-attachments/assets/fba8f207-dd0d-4084-a203-f0fa0ff7f447" />
+<img width="957" height="455" alt="image" src="https://github.com/user-attachments/assets/66394955-fe3f-4169-a929-eac5946f0481" />
+<img width="961" height="362" alt="image" src="https://github.com/user-attachments/assets/9cf50852-3e32-478f-8992-e1a100f70bee" />
+<img width="958" height="305" alt="image" src="https://github.com/user-attachments/assets/d3b48e4e-797b-4ec4-a4c7-960597515f1c" />
+<img width="961" height="385" alt="image" src="https://github.com/user-attachments/assets/238a3770-ecaf-453a-8c8e-eef946a39be8" />
+<img width="957" height="184" alt="image" src="https://github.com/user-attachments/assets/ad1748f5-95bb-4041-b12f-e51cfb6142e6" />
 
 
 ## 5. 데이터 합치기 
@@ -173,20 +178,24 @@
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<img width="953" height="416" alt="image" src="https://github.com/user-attachments/assets/fba8f207-dd0d-4084-a203-f0fa0ff7f447" />
-<img width="957" height="455" alt="image" src="https://github.com/user-attachments/assets/66394955-fe3f-4169-a929-eac5946f0481" />
-<img width="961" height="362" alt="image" src="https://github.com/user-attachments/assets/9cf50852-3e32-478f-8992-e1a100f70bee" />
-<img width="958" height="305" alt="image" src="https://github.com/user-attachments/assets/d3b48e4e-797b-4ec4-a4c7-960597515f1c" />
-<img width="961" height="385" alt="image" src="https://github.com/user-attachments/assets/238a3770-ecaf-453a-8c8e-eef946a39be8" />
-<img width="957" height="184" alt="image" src="https://github.com/user-attachments/assets/ad1748f5-95bb-4041-b12f-e51cfb6142e6" />
-
+<img width="956" height="437" alt="image" src="https://github.com/user-attachments/assets/c5fd2043-3459-40c0-a734-b241e2b5430f" />
+<img width="962" height="443" alt="image" src="https://github.com/user-attachments/assets/210b94f6-0851-4cdb-8838-b3243d914261" />
+<img width="962" height="483" alt="image" src="https://github.com/user-attachments/assets/8ef40271-c5db-40a9-a871-37b867d31ad5" />
+<img width="963" height="369" alt="image" src="https://github.com/user-attachments/assets/3dc80bbe-e699-437a-a8c7-52190936b0cf" />
+<img width="961" height="430" alt="image" src="https://github.com/user-attachments/assets/0be31674-4fbf-408c-b0c0-cb013d9b97c5" />
 
 
 ## 6. 재구성과 피벗 
 
 ### 개념정리
 
+- stack() : 열 → 행 (넓은→긴), 기본적으로 NA 자동 제거
+- unstack() : 행 → 열 (긴→넓은), level= 로 단계 지정
+- pivot() : 긴 형식 → 넓은 형식
 
+- set_index + unstack과 동일한 동작
+- pd.melt() : 넓은 형식 → 긴 형식 (pivot의 역)
+- id_vars : 유지할 열 / value_vars : 녹일 열
 
 ### 실습 인증
 
