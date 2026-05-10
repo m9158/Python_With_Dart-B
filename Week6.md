@@ -201,7 +201,9 @@
 
 <!-- 예제 실습을 진행한 후, 실행 화면을 2-3장 캡쳐하여 제출해주세요. -->
 
-<!-- 이 부분을 지우고 실행 화면을 제출해주세요. -->
+<img width="959" height="460" alt="image" src="https://github.com/user-attachments/assets/0fdc7b7b-6b3a-42cf-abd2-422148e2887f" />
+<img width="959" height="386" alt="image" src="https://github.com/user-attachments/assets/c532b2b6-96b7-4a75-bc56-cdeb54345ca5" />
+
 
 
 
